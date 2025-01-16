@@ -11,8 +11,10 @@ body {
 }
 
 .Baobabs{
-   width: 600px;
-   height: auto;
+    width:auto;
+    height: 7rem;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 header, footer {
@@ -49,10 +51,11 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 100%;
     margin: 2rem auto;
     padding: 1rem;
     display: grid;
+    grid-template-columns: 75% 23.5%;
     gap: 2rem;
 }
 
@@ -69,11 +72,28 @@ main {
    background-color: #575757;
    color: #fff;
 }
-.card img{
-   width:200px;
-   height: auto;
-   max-width: 100%;
-   border-radius: 8px;
+
+.profile{
+    width: auto;
+    height: 200px;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem #333;
+    grid-area: column2 ;
+    margin-left: 5rem;
+}
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+         "column1 column2";
+    gap: 5rem;
+}
+
+.description p{
+    grid-area: column1;
 }
 
 footer p {
