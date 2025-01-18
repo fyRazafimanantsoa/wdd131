@@ -90,7 +90,7 @@ main {
     grid-template-rows: 1fr;
     grid-template-areas:
          "column1 column2";
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .description p{
