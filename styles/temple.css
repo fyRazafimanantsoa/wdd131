@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(255, 71, 71);
+    }
+
+    header ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bar {
+        display: block;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+}
