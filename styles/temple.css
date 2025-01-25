@@ -22,30 +22,21 @@
     }
     #menu {
         display: block;
-        margin-left: 2rem;
-        font-size: 2rem;
+        margin-left: 7rem;
+        font-size: 25px;
         font-weight: 700;
         text-decoration: none;
         padding: .5rem .75rem;
         color:#585656;
         text-align: center;
-        width: 4rem;
+        width: 3rem;
+        
     }
 
     #menu::before {
         content: "Ξ";
     }
-    
-    .show li {
-        display: block;
-    }
-    
     #menu.show::before {
         content: "X";
-    }
-
-    img{
-        width: 300px;
-        height: auto;
     }
 }
