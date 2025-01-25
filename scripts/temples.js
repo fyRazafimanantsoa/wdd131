@@ -8,7 +8,11 @@ const lastModified = document.lastModified;
 const lastModifiedParagraph = document.getElementById("lastModified");
 lastModifiedParagraph.textContent = `Last Modified: ${lastModified}`;
 
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show'); 
-}
+
+const menu = document.getElementById('menu');
+const head = document.getElementById('navigation')
+
+menu.addEventListener( 'click', ()=> {
+    head.classList.toggle('show');
+    menu.classList.toggle('show');
+})
