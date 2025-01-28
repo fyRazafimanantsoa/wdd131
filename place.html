@@ -6,8 +6,8 @@
     <meta name="description" content="A simple website about Madagascar with its data and weather">
     <meta name="author" content="Fy Razafimanantsoa">
     <title>Weather Place</title>
-    <link rel="stylesheet" href="styles/place-large.css">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -15,12 +15,8 @@
         <h1>Madagascar</h1>
     </header>
     <main>
-        <picture>
-            <source srcset="images/Baobab2.webp" media="(max-width: 480px)">
-            <source srcset="images/Baobab1.webp" media="(max-width: 800px)">
-            <img src="images/Tsingy.webp" alt="Beautiful view of the Tsingy" media="(min-width: 801px)">
-        </picture>
-        <section>
+        
+        <section class="first">
             <div class="container">
                 <div class="data">
                     <h2>Data</h2>
@@ -35,7 +31,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="second">
             <h2>Weather <span class="weather-icon">⛅</span></h2>
             <p><strong>Temperature:</strong> 10 °C</p>
             <p><strong>Conditions:</strong> Partly Cloudy</p>
@@ -44,7 +40,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear">⛅ Fy Razafimanantsoa ⛅ Madagascar</span></p>
+        <p>&copy;<span id="currentyear"> </span>⛅ Fy Razafimanantsoa ⛅ Madagascar </p>
         <p><span id="lastModified"></span></p>
     </footer>
 </body>

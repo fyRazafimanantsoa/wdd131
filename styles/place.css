@@ -1,15 +1,3 @@
-body {
-    padding: 1rem;
-}
-
-header {
-    padding: 0.5rem;
-}
-
-.weather-icon {
-    display: none; /* Hide in small screen */
-}
-
 /* Media Queries for Small Screens */
 @media (max-width: 480px) {
     header {

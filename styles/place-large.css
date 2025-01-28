@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin:0;
+}
 :root {
     --primary-color: #ff0000; /* Red */
     --secondary-color: #008000; /* Green */
@@ -7,27 +11,33 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    background-image: url('images/Tsingy.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
+    width: 100%;
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
+    width: 100%;
 }
 
 .container {
-    max-width: 800px;
+    position: relative;
+    max-width: 500px;
     margin: auto;
+    border: 1px solid #f8dada;
+    background-color:var(--secondary-color);
     padding: 1rem;
 }
 
 .data {
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .weather-icon {
@@ -40,4 +50,10 @@ header {
     background-image: url('images/.weather-icon.svg'); /* Your SVG icon */
     background-size: cover;
     vertical-align: middle;
+}
+
+footer{
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #ffffff;
 }
