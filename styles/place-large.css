@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #ff0000; /* Red */
+    --secondary-color: #008000; /* Green */
+    --background-color: #ffffff; /* White */
+    --text-color: #000000; /* Black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.data {
+    margin-bottom: 2rem;
+}
+
+.weather-icon {
+    /* Pseudo element for larger screen */
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-image: url('images/.weather-icon.svg'); /* Your SVG icon */
+    background-size: cover;
+    vertical-align: middle;
+}

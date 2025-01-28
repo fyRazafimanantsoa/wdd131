@@ -1,0 +1,32 @@
+body {
+    padding: 1rem;
+}
+
+header {
+    padding: 0.5rem;
+}
+
+.weather-icon {
+    display: none; /* Hide in small screen */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .data {
+        margin-bottom: 1rem; /* Adjust spacing for small screens */
+    }
+
+    .weather-icon {
+        display: inline; /* Show icon in small screen */
+        width: 15px; /* Adjust size as needed */
+        height: 15px; /* Adjust size as needed */
+    }
+}
