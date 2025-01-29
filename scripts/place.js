@@ -1,23 +1,15 @@
 // Current Year
 const currentYearSpan = document.getElementById('currentyear');
-const currentYear = new Date().getFullYear();
-currentYearSpan.textContent = currentYear;
+currentYearSpan.textContent = new Date().getFullYear();
 
 // Last Modified
-const lastModified = document.lastModified;
-const lastModifiedParagraph = document.getElementById("lastModified");
-lastModifiedParagraph.textContent = `Last Modified: ${lastModified}`;
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-// Wind Chill Calculation
-const temperature = 10; 
-const windSpeed = 5; 
+// Wind Chill (Single-line function + conditions)
+const calculateWindChill = (temp, speed) => 
+    (temp <= 10 && speed > 4.8) 
+        ? Math.round(13.12 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16)) 
+        : 'N/A';
 
-function calculateWindChill(temp, speed) {
-    if (temp <= 10 && speed > 4.8) {
-        return Math.round(13.12 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16));
-    }
-    return 'N/A';
-}
-
-const windChillElement = document.getElementById('windChill');
-windChillElement.textContent = calculateWindChill(temperature, windSpeed);
+// Display wind chill
+document.getElementById('windChill').textContent = calculateWindChill(10, 5);

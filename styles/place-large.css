@@ -1,59 +1,94 @@
-*{
+* {
+    margin: 0;
     padding: 0;
-    margin:0;
+    box-sizing: border-box;
 }
+
 :root {
-    --primary-color: #ff0000; /* Red */
-    --secondary-color: #008000; /* Green */
-    --background-color: #ffffff; /* White */
-    --text-color: #000000; /* Black */
+    --primary-color: #cc0000; /* Adjusted for AA contrast */
+    --secondary-color: #006400; 
+    --background-color: #ffffff;
+    --text-color: #333333;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url('images/Tsingy.webp'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    color: var(--text-color);
-    width: 100%;
 }
 
 header {
+    width: 100%;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+.image-container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container {
-    position: relative;
-    max-width: 500px;
-    margin: auto;
-    border: 1px solid #f8dada;
-    background-color:var(--secondary-color);
-    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.data {
-    margin-bottom: 2rem;
-    position: relative;
+.data, .weather {
+    background: rgba(250, 230, 230, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 45%;
 }
 
-.weather-icon {
-    /* Pseudo element for larger screen */
-    position: relative;
-    content: "";
-    display: inline-block;
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    background-image: url('images/.weather-icon.svg'); /* Your SVG icon */
-    background-size: cover;
-    vertical-align: middle;
+.weather{
+    margin-top: 30%;
+    margin-right: 5%;
+    width: 30%;
+    height: 10%;
 }
 
-footer{
+.data{
+    margin-bottom: 30%;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.weather h2::after {
+    content: "⛅";
+    margin-left: 0.5rem;
+    font-size: 1.2em;
+}
+
+.mobile-icon {
+    display: none; /* Hidden by default */
+}
+
+footer {
     background-color: var(--primary-color);
     text-align: center;
-    color: #ffffff;
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
 }

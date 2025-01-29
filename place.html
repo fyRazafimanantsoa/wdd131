@@ -6,8 +6,8 @@
     <meta name="description" content="A simple website about Madagascar with its data and weather">
     <meta name="author" content="Fy Razafimanantsoa">
     <title>Weather Place</title>
-    <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -15,32 +15,40 @@
         <h1>Madagascar</h1>
     </header>
     <main>
-        
-        <section class="first">
-            <div class="container">
-                <div class="data">
-                    <h2>Data</h2>
-                    <p><strong>Area:</strong> 587,041 sq km</p>
-                    <p><strong>Population:</strong> 27,691,018</p>
-                    <p><strong>Capital:</strong> Antananarivo</p>
-                    <p><strong>Languages:</strong> Malagasy, French</p>
-                    <p><strong>Currency:</strong> Malagasy Ariary</p>
-                    <p><strong>Time Zone:</strong> UTC+3</p>
-                    <p><strong>Calling Code:</strong> +261</p>
-                    <p><strong>Internet TLD:</strong> .mg</p>
-                </div>
-            </div>
-        </section>
-        <section class="second">
-            <h2>Weather <span class="weather-icon">⛅</span></h2>
-            <p><strong>Temperature:</strong> 10 °C</p>
-            <p><strong>Conditions:</strong> Partly Cloudy</p>
-            <p><strong>Wind:</strong> 5 km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
-        </section>
+        <div class="image-container">
+            <picture>
+                <source srcset="images/Tsingy.webp" media="(min-width: 801px)">
+                <source srcset="images/Baobab1.webp" media="(min-width: 481px)">
+                <img src="images/Baobab2.webp" alt="Beautiful places in Madagascar" class="hero-image" loading="lazy">
+            </picture>
+        </div>
+        <div class="container">
+            <section class="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 587,041 sq km</p>
+                <p><strong>Population:</strong> 27,691,018</p>
+                <p><strong>Capital:</strong> Antananarivo</p>
+                <p><strong>Languages:</strong> Malagasy, French</p>
+                <p><strong>Currency:</strong> Malagasy Ariary</p>
+                <p><strong>Time Zone:</strong> UTC+3</p>
+                <p><strong>Calling Code:</strong> +261</p>
+                <p><strong>Internet TLD:</strong> .mg</p>
+            </section>
+            <section class="weather">
+                <h2>Weather 
+                    <span class="weather-icon">
+                        <svg class="mobile-icon" src="images/weather.svg" viewBox="0 0 24 24" aria-hidden="true">
+                        </svg>
+                    </span>
+                </h2>
+                <p><strong>Temperature:</strong> <span id="temperature">10</span>°C</p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed">5</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+            </section>
+        </div>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"> </span>⛅ Fy Razafimanantsoa ⛅ Madagascar </p>
+        <p>&copy; <span id="currentyear"></span> ⛅ Fy Razafimanantsoa ⛅ Madagascar</p>
         <p><span id="lastModified"></span></p>
     </footer>
 </body>

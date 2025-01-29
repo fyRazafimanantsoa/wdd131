@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple website about Madagascar with its data and weather">
+    <meta name="author" content="Fy Razafimanantsoa">
+    <title>Madagascar Weather</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script defer>
+        function calculateWindChill(temp, windSpeed) {
+            if (temp <= 10 && windSpeed > 4.8) {
+                return (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
+            } else {
+                return "N/A";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const temp = parseFloat(document.getElementById("temperature").textContent);
+            const windSpeed = parseFloat(document.getElementById("windSpeed").textContent);
+            document.getElementById("windChill").textContent = calculateWindChill(temp, windSpeed);
+
+            document.getElementById("currentyear").textContent = `&copy; ${new Date().getFullYear()} Fy Razafimanantsoa ⛅ Madagascar`;
+            document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            body {
+                background-image: url('../images/Baobab2.webp');
+            }
+        }
+        @media (min-width: 481px) and (max-width: 800px) {
+            body {
+                background-image: url('../images/Baobab1.webp');
+            }
+        }
+        @media (min-width: 801px) {
+            body {
+                background-image: url('../images/Tsingy.webp');
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+    <main>
+        <section class="overlay">
+            <div class="weather">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <p><strong>Temperature:</strong> <span id="temperature">10</span>°C</p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed">5</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+            </div>
+            <div class="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 587,041 sq km</p>
+                <p><strong>Population:</strong> 27,691,018</p>
+                <p><strong>Capital:</strong> Antananarivo</p>
+                <p><strong>Languages:</strong> Malagasy, French</p>
+                <p><strong>Currency:</strong> Malagasy Ariary</p>
+                <p><strong>Time Zone:</strong> UTC+3</p>
+                <p><strong>Calling Code:</strong> +261</p>
+                <p><strong>Internet TLD:</strong> .mg</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="currentyear"></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
