@@ -96,8 +96,6 @@ const temples = [
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/the-hague-netherlands/2019/800x500/1-hague-netherlands-temple-2196995.jpg"
     },
   ];
-
-
 function renderTemples(templesArray) {
   const container = document.getElementById('templeCards');
   container.innerHTML = '';
@@ -116,8 +114,6 @@ function renderTemples(templesArray) {
     container.appendChild(figure);
   });
 }
-
-
 function applyFilter(filterType) {
   let filtered = [];
   
