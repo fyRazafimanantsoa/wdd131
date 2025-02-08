@@ -92,7 +92,7 @@ temples = [
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 12000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/800x1280/tokyo_japan_temple-main.jpeg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/800x500/tokyo_japan_temple-main.jpeg"
   },
   {
     templeName: "The Hague Netherlands",
