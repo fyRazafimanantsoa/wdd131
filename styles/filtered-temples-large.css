@@ -2,85 +2,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: "Roboto", serif;
-    font-weight: 100;
-    background: rgb(247, 235, 235);
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background: #f7ebeb;
     color: #333;
-}
-
-header {
-    position: relative;
-    background: rgb(255, 143, 143);
-    box-shadow: 0px 4px 6px black;
+  }
+  
+  header {
+    background: #b33a3a;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-header ul {
+  }
+  
+  h1 {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
-}
-
-header ul li {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background: rgb(255, 71, 71);
-}
-
-header ul li a {
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: white;
     text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    background: #8b0000;
+    transition: background 0.3s;
+  }
+  
+  nav a.active {
+    background: #600000;
     font-weight: bold;
-    color: #fff;
-}
-
-.active {
-    color: yellow;
-}
-
-header ul li:hover {
-    background: #811616;
-    transition: background 0.3s ease;
-    color: #fff;
-}
-
-main {
-    justify-items: center;
+  }
+  
+  .picture-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
     max-width: 1280px;
     margin: 0 auto;
-}
-
-.picture-display {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    margin: 0 auto;
-    grid-gap: 1rem;
-    place-items: center;
-    padding: 5rem;
-}
-
-figure {
-    max-width: 300px;
-}
-
-img {
-    max-width: 300px;
-    height: auto;
-    border: 2px solid #fff;
+  }
+  
+  figure {
+    background: white;
     border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-footer {
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #b33a3a;
+  }
+  
+  figcaption {
+    padding: 1.5rem;
+  }
+  
+  figcaption h2 {
+    color: #b33a3a;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  footer {
+    background: #b33a3a;
+    color: white;
     text-align: center;
-    padding: 1.5rem 1rem;
-    background: rgb(255, 71, 71);
-    color: #fff;
-}
+    padding: 1.5rem;
+  }

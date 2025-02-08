@@ -13,3 +13,4 @@ const calculateWindChill = (temp, speed) =>
 
 // Display wind chill
 document.getElementById('windChill').textContent = calculateWindChill(10, 5);
+
