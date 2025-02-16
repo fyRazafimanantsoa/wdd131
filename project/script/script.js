@@ -27,7 +27,7 @@ document.getElementById('communityForm').addEventListener('submit', function(eve
       // Create a new story element
       const storyDiv = document.createElement('div');
       storyDiv.classList.add('story');
-      storyDiv.innerHTML = '<h3>' + username + '</h3><p>' + journey + '</p><hr>';
+      storyDiv.innerHTML = '<h3>' + username + '</h3><hr><p>' + journey + '</p>';
       
       // Append to stories section
       document.getElementById('stories').appendChild(storyDiv);
