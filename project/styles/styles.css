@@ -33,13 +33,10 @@ header {
     margin-right: 30px;
 }
 .menu a {
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
     box-shadow: 1px 3px 5px 1px #06c7bda9;
     background-color: #CBDDD1;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto 20px;
     width: 70px;
     height: 35px;
     display: flex;
@@ -56,10 +53,10 @@ a, .news p {
     text-decoration: none;
 }
 
-.B-one, .B-three, .B-two {
+.B-one, .B-two, .B-three {
     border: 1px solid rgb(199, 196, 196);
     box-shadow: 5px 5px 10px 2.5px #06c7bda9;
-    margin: 50px 50px 40px 20px;
+    margin: 50px 20px 40px;
     padding: 10px 0 0 20px;
     width: 800px;
     height: 180px;
@@ -71,51 +68,49 @@ a, .news p {
 }
 .B-two {
     margin-left: auto;
-    margin-bottom: 40px;
     margin-right: 30px;
-    right: 0;
 }
 .B-one:hover, .B-two:hover, .B-three:hover {
     transform: scale(1.05);
 }
 .feature {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin: 10rem auto 5rem;
     text-align: center;
     background-color: #1279a8a9;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     font-size: 20px;
     width: 90%;
     height: 700px;
     overflow: hidden;
 }
 .news {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: block;
+    margin: 1rem auto;
+    width: 95%;
+    padding: 1rem;
     background-color: #CBDDD1;
-    border: 1px #262627a9;
-    border-radius: 1%;
-    box-shadow: 2.5px 2.5px 5px 2.5px #06c7bda9;
-    width: 95%;
-    height: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    flex-flow: column;
-    text-align: center;
-    padding: 10px;
 }
-.top, .middle, .bottom {
-    box-shadow: 2.5px 2.5px 5px 2.5px #06c7bda9;
-    width: 95%;
-    transition: transform 1s ease;
+.news-item {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #06c7bda9;
     background-color: #06c7bda9;
+    box-shadow: 2px 2px 5px rgba(6, 199, 189, 0.5);
+    transition: transform 1s ease;
 }
-.top:hover, .middle:hover, .bottom:hover {
+
+.news-item h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.news-item p {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.news-item:hover {
     transform: scale(1.05);
 }
 footer {
@@ -126,4 +121,63 @@ footer {
     height: 100px;
     background-color: #60806f;
     position: relative;
+}
+
+
+#jsBasics {
+    margin: 2rem auto;
+    width: 90%;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#jsBasics h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#jsBasics p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#jsEditor {
+    width: 100%;
+    height: 150px;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #06c7bda9;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(6, 199, 189, 0.5);
+}
+
+#runJSButton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #60806f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 3px rgba(6, 199, 189, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+#runJSButton:hover {
+    background-color: #50705e;
+}
+
+#jsOutput {
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem;
+    border: 1px solid #06c7bda9;
+    min-height: 50px;
+    font-family: monospace;
+    white-space: pre-wrap;
 }

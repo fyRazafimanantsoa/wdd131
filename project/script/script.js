@@ -17,3 +17,22 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.textContent = nav.classList.contains('show') ? '✖' : '☰';
     });
 });
+
+document.getElementById('communityForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const journey = document.getElementById('journey').value;
+    
+    if(username && journey) {
+      // Create a new story element
+      const storyDiv = document.createElement('div');
+      storyDiv.classList.add('story');
+      storyDiv.innerHTML = '<h3>' + username + '</h3><p>' + journey + '</p><hr>';
+      
+      // Append to stories section
+      document.getElementById('stories').appendChild(storyDiv);
+      
+      // Reset the form
+      this.reset();
+    }
+  });
