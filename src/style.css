@@ -1,0 +1,37 @@
+body{
+    display: grid;
+    grid-template: auto 50vh auto / auto 50vh auto;
+    height: 100vh;
+    margin: 0;
+}
+
+.header{
+    grid-column: 1 / 4;
+    background-color: aqua;
+    display: grid;
+}
+
+.lsbar{
+    grid-column: 1/2;
+    background: red;
+    display: grid;
+}
+
+.main{
+    grid-column: 2/3;
+    display: grid;
+    background: green;
+}
+
+.rsbar{
+    grid-column: 3/4;
+    display: grid;
+    background: tan;
+}
+
+.footer{
+    grid-column: 1 / 4;
+    
+    background-color: yellow;
+    display: grid;
+}
