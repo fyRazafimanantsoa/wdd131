@@ -1,37 +1,31 @@
 body{
-    display: grid;
-    grid-template: auto 50vh auto / auto 50vh auto;
-    height: 100vh;
+    height: 500vh;
     margin: 0;
+    display: grid;
 }
 
 .header{
-    grid-column: 1 / 4;
     background-color: aqua;
-    display: grid;
-}
-
-.lsbar{
-    grid-column: 1/2;
-    background: red;
-    display: grid;
+    height: 5rem;
 }
 
 .main{
-    grid-column: 2/3;
     display: grid;
     background: green;
 }
 
-.rsbar{
-    grid-column: 3/4;
-    display: grid;
-    background: tan;
+#firstview{
+    background-color: red;
+}
+
+#Previewproduct{
+    background-color: orange;
+}
+#Sitedetails{
+    background-color: purple;
 }
 
 .footer{
-    grid-column: 1 / 4;
-    
     background-color: yellow;
-    display: grid;
+    height: 10rem;
 }
