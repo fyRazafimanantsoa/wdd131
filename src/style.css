@@ -1,16 +1,13 @@
 body {
-    height: 500vh;
     margin: 0;
     display: grid;
 }
 
 .header {
     background-color: aqua;
-    height: 5rem;
 }
 
 .main {
-    display: grid;
     background: green;
     padding: 1rem;
 }
@@ -27,8 +24,6 @@ body {
     background-color: purple;
 }
 
-
 .footer {
     background-color: yellow;
-    height: 10rem;
 }
