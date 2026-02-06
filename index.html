@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning from scratch again</title>
+    <title>layout training</title>
     <link rel="stylesheet" href="layout.css">
 </head>
+
 <body>
     <header id="header">
-        <h2>Header content</h2>
+        <div id="logo">MySite</div>
         <nav>
             <ul id="navList">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li> 
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <main id="mainContent">
-        <h2>main content</h2>
-        <h3>Find here the best products</h3>
-        <div id="productContent">
-            <div class="card">
-                <img src="" alt="Product image">
-                <h4>Product</h4>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Excepturi, veniam.
-                </p>
-            </div>
-            <div class="card">
-                <img src="" alt="Product image">
-                <h4>Product</h4>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Excepturi, veniam.
-                </p>
-            </div>
-            <div class="card">
-                <img src="" alt="Product image">
-                <h4>Product</h4>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Excepturi, veniam.
-                </p>
-            </div>
+
+    <main id="mainContainer">
+        <div id="firstview">
+            <h2>Looking for the best deals online?</h2>
+            <p>You might be correct to not look anywhere else but here</p>
+            <img src="" alt="">
         </div>
+        <section id="previewProduct">
+            <h2>Preview Product</h2>
+            <div id="product-container">
+                <div id="product-item">
+                    <img src="" alt="">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1</p>
+                </div>
+                <div id="product-item">
+                    <img src="" alt="">
+                    <h3>Product 2</h3>
+                    <p>Description of Product 2</p>
+                </div>
+                <div id="product-item">
+                    <img src="" alt="">
+                    <h3>Product 3</h3>
+                    <p>Description of Product 3</p>
+                </div>
+            </div>
+        </section>
+
     </main>
     <aside id="asideContent">
-        <h2>aside content</h2>
+        <h4>side</h4>
     </aside>
-    <footer id="footerContent">
-        <h2>footer</h2>
+    <footer id="footer">
+        <p> &copy; 2026 Onyx Electronics</p>
     </footer>
 </body>
 </html>
