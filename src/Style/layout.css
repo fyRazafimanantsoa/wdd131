@@ -3,6 +3,7 @@
     --secondary-color: #575757;
     --tertiary-color: #ffffff;
     --accent-color: #bebebe;
+    --space-xxl: 25vh;
     --space-xl: 20vh;
     --space-lg: 15vh;
     --space-md: 10vh;
@@ -65,16 +66,29 @@ body {
 #previewProduct {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    margin-top: var(--space-xs);
 }
 
 #product-container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     justify-content: space-evenly;
 }
 
-
+.productItem {
+    margin: var(--space-md);
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    padding: var(--space-xxs);
+    min-height: var(--space-xxl);
+    min-width: var(--space-xxl);
+    border-radius: var(--space-xxs);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 #asideContent {
     padding: var(--space-xs);
